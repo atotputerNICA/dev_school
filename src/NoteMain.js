@@ -9,9 +9,16 @@ export class NoteMain extends LitElement {
         /* width: 100%; */
         /* background: lightblue; */
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         padding: 1rem;
         background: #cce4ce;
+
+      }
+
+      @media only screen and (max-width: 600px)  {
+        :host {
+          flex-direction: column;
+        }
       }
     `;
   }

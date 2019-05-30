@@ -7,6 +7,7 @@ class Note extends LitElement {
         background: #bdcebe;
         padding: 1rem;
         margin: 0.5rem;
+        height: max-content;
       }
     `;
   }
