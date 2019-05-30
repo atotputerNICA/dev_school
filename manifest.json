@@ -1,0 +1,13 @@
+{
+  "background_color": "#08525d",
+  "display": "standalone",
+  "icons": [{
+    "src": "icon.png",
+    "sizes": "144x144",
+    "type": "image/png"
+  }],
+  "name": "My Notes",
+  "short_name": "Notes",
+  "start_url": "./",
+  "theme_color": "#6b5b95"
+}
