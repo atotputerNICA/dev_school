@@ -6,6 +6,7 @@ class Note extends LitElement {
       :host { /* for space-data*/
         background: #bdcebe;
         padding: 1rem;
+        margin: 0.5rem;
       }
     `;
   }

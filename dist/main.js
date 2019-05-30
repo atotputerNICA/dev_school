@@ -126,7 +126,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /*!*************************************************!*\
   !*** ./node_modules/lit-element/lit-element.js ***!
   \*************************************************/
-/*! exports provided: html, svg, TemplateResult, SVGTemplateResult, LitElement, defaultConverter, notEqual, UpdatingElement, customElement, property, query, queryAll, eventOptions, supportsAdoptingStyleSheets, CSSResult, unsafeCSS, css */
+/*! exports provided: defaultConverter, notEqual, UpdatingElement, customElement, property, query, queryAll, eventOptions, html, svg, TemplateResult, SVGTemplateResult, supportsAdoptingStyleSheets, CSSResult, unsafeCSS, css, LitElement */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -298,7 +298,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var lit_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lit-element */ \"./node_modules/lit-element/lit-element.js\");\n\r\n\r\nclass Note extends lit_element__WEBPACK_IMPORTED_MODULE_0__[\"LitElement\"] {\r\n  static get styles() {\r\n    return lit_element__WEBPACK_IMPORTED_MODULE_0__[\"css\"]`\r\n      :host { /* for space-data*/\r\n        background: #bdcebe;\r\n        padding: 1rem;\r\n      }\r\n    `;\r\n  }\r\n\r\n  static get properties() {\r\n    return {\r\n      text: { type: String }\r\n    };\r\n  }\r\n\r\n  render() {\r\n    return lit_element__WEBPACK_IMPORTED_MODULE_0__[\"html\"]`\r\n      <div><output>${this.text}</output></div>\r\n    `;\r\n  }\r\n}\r\n\r\nwindow.customElements.define('my-note', Note);\r\n\n\n//# sourceURL=webpack:///./src/Note.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var lit_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lit-element */ \"./node_modules/lit-element/lit-element.js\");\n\r\n\r\nclass Note extends lit_element__WEBPACK_IMPORTED_MODULE_0__[\"LitElement\"] {\r\n  static get styles() {\r\n    return lit_element__WEBPACK_IMPORTED_MODULE_0__[\"css\"]`\r\n      :host { /* for space-data*/\r\n        background: #bdcebe;\r\n        padding: 1rem;\r\n        margin: 0.5rem;\r\n      }\r\n    `;\r\n  }\r\n\r\n  static get properties() {\r\n    return {\r\n      text: { type: String }\r\n    };\r\n  }\r\n\r\n  render() {\r\n    return lit_element__WEBPACK_IMPORTED_MODULE_0__[\"html\"]`\r\n      <div><output>${this.text}</output></div>\r\n    `;\r\n  }\r\n}\r\n\r\nwindow.customElements.define('my-note', Note);\r\n\n\n//# sourceURL=webpack:///./src/Note.js?");
 
 /***/ }),
 
