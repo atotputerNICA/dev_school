@@ -11,6 +11,7 @@ export class NoteMain extends LitElement {
         display: flex;
         flex-direction: column;
         padding: 1rem;
+        background: #cce4ce;
       }
     `;
   }
