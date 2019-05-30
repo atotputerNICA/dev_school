@@ -8,6 +8,10 @@ class Note extends LitElement {
         padding: 1rem;
         margin: 0.5rem;
         height: max-content;
+
+      }
+      :host(:hover) {
+        box-shadow: 10px 10px 5px #aaaaaa;
       }
     `;
   }
