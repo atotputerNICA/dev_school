@@ -6,7 +6,7 @@ export class NoteMain extends LitElement {
     return css`
       :host { /* for space-data*/
         height: 100%;
-        width: 100%;
+        /* width: 100%; */
         /* background: lightblue; */
         display: flex;
         flex-direction: column;
