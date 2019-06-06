@@ -15,12 +15,13 @@
 
   <body>
     <my-notes id="my-notes">
+      <!-- <my-note text="dsjdhjs"></my-note>
       <my-note text="dsjdhjs"></my-note>
       <my-note text="dsjdhjs"></my-note>
-      <my-note text="dsjdhjs"></my-note>
-      <my-note text="dsjdhjs"></my-note>
-      <div id="create">+</div>
+      <my-note text="dsjdhjs"></my-note> -->
     </my-notes>
+    <div id="create">+</div>
+
 
     <script>
 
@@ -28,7 +29,16 @@
 
       function addNote() {
         var newNote = document.createElement('my-note');
-        // console.log(newNote);
+        var notes = JSON.parse(localStorage.getItem('notes'));
+        var id = 0;
+
+        if (notes !== null)
+          id = notes.length;
+
+        newNote.setAttribute("id", id);
+
+
+        console.log(newNote);
         this.parentNode.insertBefore(newNote, this);
       }
 

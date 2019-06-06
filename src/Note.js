@@ -50,18 +50,44 @@ class Note extends LitElement {
 
   static get properties() {
     return {
-      text: { type: String }
+      text: { type: String },
+      id: {type: Number}
     };
   }
 
   render() {
     return html`
       <div>
-        <textarea>${this.text}</textarea>
-        <span class="close">&times;</span>
+        <textarea @focusout=${this.save(this.value)}>${this.text}</textarea>
+        <span class="close" @click=${this.deleteNote}>&times;</span>
       </div>
     `;
   }
+
+  deleteNote() {
+    const notes = this.read();
+    this.write(notes.splice(this.id, 1));
+    // this.parent
+
+  }
+  save(data) {
+    const notes = this.read();
+    const note = {id: this.id, text: data};
+    notes.push(note);
+    this.write(notes);
+  }
+
+  read() {
+    const notes = JSON.parse(localStorage.getItem('notes'));
+    return notes === null ? [] : notes;
+  }
+
+  write(data) {
+    localStorage.setItem('notes', JSON.stringify(data));
+  }
+
+
+
 }
 
 window.customElements.define('my-note', Note);

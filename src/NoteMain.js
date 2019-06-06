@@ -29,10 +29,17 @@ export class NoteMain extends LitElement {
   }
 
   render() {
+    const notes = JSON.parse(localStorage.getItem('notes'));
+
+    if (notes === null) {
+      return html`<slot></slot>`;
+    }
     return html`
-      <slot></slot>
+      ${notes.map((element) => html`<my-note text=${element.text} id=${element.id}></my-note>`)}
     `;
   }
+
+
 }
 
 // window.customElements.define('my-notes', NoteMain);
