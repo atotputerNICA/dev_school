@@ -57,7 +57,7 @@ class Note extends LitElement {
   render() {
     return html`
       <div>
-        <textarea contenteditable="true">${this.text}</textarea>
+        <textarea>${this.text}</textarea>
         <span class="close">&times;</span>
       </div>
     `;
