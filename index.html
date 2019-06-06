@@ -14,13 +14,28 @@
   </head>
 
   <body>
-    <my-notes>
-      <!-- <p>Dana</p> -->
+    <my-notes id="my-notes">
       <my-note text="dsjdhjs"></my-note>
       <my-note text="dsjdhjs"></my-note>
       <my-note text="dsjdhjs"></my-note>
       <my-note text="dsjdhjs"></my-note>
+      <div id="create">+</div>
     </my-notes>
+
+    <script>
+
+      document.getElementById("create").addEventListener("click", addNote);
+
+      function addNote() {
+        var newNote = document.createElement('my-note');
+        // console.log(newNote);
+        this.parentNode.insertBefore(newNote, this);
+      }
+
+    </script>
+
   </body>
+
+
 
 </html>
